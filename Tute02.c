@@ -15,10 +15,26 @@ Amount = 20 x 50 = 1000
 
 Distance -> 50
 Amount = 30 x 50 + (50-30) x 40 = 2300*/
+//this program shows that the amount to be paid for a rented vehicle.
+#include <stdio.h>//declaring hadder file
+int main (void){//declaration of main function
 
-#include <stdio.h>
+//declaring and initializing variable's
+float distance;
+float amount;
 
-int main() {
-  
+//taking the User input
+  printf("Enter the Distance you Travelled ? : ");
+  scanf("%f",&distance);
+
+  //calculation
+if(distance<=30)
+  amount=50.00*distance;
+else
+  amount= (50.00*30)+(40.00*(distance-30));
+
+//display the output
+printf("\nTotal Price is : %.2f",amount);
+
   return 0;
 }
